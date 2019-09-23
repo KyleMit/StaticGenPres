@@ -1,0 +1,25 @@
+---
+layout: slide.njk
+pagination:
+  data: collections.slides
+  size: 1
+  alias: slide
+permalink: /slides/{{ pagination.pageNumber + 1 }}/index.html
+---
+
+{{slide | safe}}
+
+
+<div class="pagination">
+  {% if pagination.previousPageHref %}
+  <a class="pagination-item prev" rel="prev" href="{{ pagination.previousPageHref }}">‹</a>
+  {% endif %}
+
+    <span class="flex-spacer" ></span>
+
+  {% if pagination.nextPageHref %}
+  <a class="pagination-item next" rel="next" href="{{ pagination.nextPageHref }}">›</a>
+  {% endif %}
+
+  <div class="progress-bar" style="width: {{ (pagination.pageNumber / (collections.slides.length - 1)) * 100}}%"></div>
+</div>

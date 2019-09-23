@@ -1,0 +1,23 @@
+{
+  "name": "ssg-presentation",
+  "version": "1.0.0",
+  "description": "JAMming out with Static Site Generators: Web development made awesome",
+  "scripts": {
+    "clean": "rm -rf _site",
+    "11ty-build": "npx eleventy",
+    "11ty-serve": "npx eleventy --serve",
+    "reveal-serve": "npx reveal-md ./slides/index.md --theme moon",
+    "reveal-build": "npx reveal-md ./slides/index.md --static _site/reveal --theme moon",
+    "serve": "npm run reveal-build & npm run 11ty-serve",
+    "build": "npm run 11ty-build && npm run reveal-build"
+  },
+  "keywords": [],
+  "author": "Kyle & Zeke",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.9.0",
+    "clean-css": "^4.2.1",
+    "highlightjs": "^9.12.0",
+    "terser": "^4.3.1"
+  }
+}

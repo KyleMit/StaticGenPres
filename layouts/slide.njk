@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" > 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+    {# Primary Meta Tags #}
+    <title>Intro to Static Site Generation</title>
+ 
+    {# capture the CSS content as a Nunjucks variable #}
+    {% set css %}
+        {% include "assets/styles/styles.css" %}
+    {% endset %}
+    {# feed it through our cssmin filter to minify #}
+    <style type="text/css">{{ css | cssmin | safe }}</style>
+
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Lato&display=swap" rel="stylesheet">
+</head>
+
+<body class="page">
+
+
+    <main class="content">
+        
+        {{ content | safe }}
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    {# capture the JS content as a Nunjucks variable #}
+    {% set js %}
+        {% include "assets/scripts/slide.js" %}
+    {% endset %}
+    {# feed it through our cssmin filter to minify #}
+    <script type="text/javascript">{{ js | jsmin | safe }}</script>
+
+</body>
+</html>

@@ -17,7 +17,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("slides", col => {
         let slideCol = col.getFilteredByGlob("slides/index.md");
         let master = slideCol[0]
-        let index = master.template.frontMatter.content.split("\r\n---\r\n")
+        let index = master.template.frontMatter.content.split(/\r?\n---\r?\n/)
         let slides = index.map(s => md.render(s))
         return slides
     });

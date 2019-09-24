@@ -2,6 +2,10 @@
 
 By Zeke & Kyle
 
+Available at https://static-gen-presentation.netlify.com/
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1995aa09-f8f2-44e2-b978-37f523b63e8c/deploy-status)](https://app.netlify.com/sites/static-gen-presentation/deploys)
+
 ## Built With
 
 

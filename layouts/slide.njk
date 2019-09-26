@@ -1,46 +1,18 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" > 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-
-    {# Primary Meta Tags #}
-    <title>Intro to Static Site Generation</title>
- 
-    {# capture the CSS content as a Nunjucks variable #}
-    {% set css %}
-        {% include "assets/styles/styles.css" %}
-    {% endset %}
-    {# feed it through our cssmin filter to minify #}
-    <style type="text/css">{{ css | cssmin | safe }}</style>
-    {# <link href="https://unpkg.com/animate.css@3.7.2/animate.min.css" rel="stylesheet" > #}
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Lato&display=swap" rel="stylesheet">
-</head>
-
-<body class="page">
+---
+layout: default.njk
+---
 
 
-    <main class="content">
-        
-        {{ content | safe }}
+{{ content | safe }}
 
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" data-turbolinks-eval="false" data-turbolinks-suppress-warning></script>
-    {# 
-    <script src="https://unpkg.com/turbolinks@5.2.0/dist/turbolinks.js" data-turbolinks-eval="false" data-turbolinks-suppress-warning></script>
-    <script src="https://unpkg.com/turbolinks-animate@3.2.0/src/index.js" data-turbolinks-eval="false" data-turbolinks-suppress-warning></script>
-    #}
-    
-    {# capture the JS content as a Nunjucks variable #}
-    {% set js %}
-        {% include "assets/scripts/slide.js" %}
-    {% endset %}
-    {# feed it through our cssmin filter to minify #}
-    <script type="text/javascript" data-turbolinks-eval="false" data-turbolinks-suppress-warning>
-        {{ js | jsmin | safe }}
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" data-turbolinks-eval="false" data-turbolinks-suppress-warning></script>
 
-</body>
-</html>
+{# capture the JS content as a Nunjucks variable #}
+{% set js %}
+    {% include "assets/scripts/slide.js" %}
+{% endset %}
+{# feed it through our cssmin filter to minify #}
+<script type="text/javascript" data-turbolinks-eval="false" data-turbolinks-suppress-warning>
+    {{ js | jsmin | safe }}
+</script>

@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("reveal");
     eleventyConfig.addPassthroughCopy("slides");
 
+    eleventyConfig.addPassthroughCopy("favicon.ico");
+
     // add filters
     eleventyConfig.addFilter("cssmin", require("./plugins/clean-css.js") );
     eleventyConfig.addFilter("jsmin", require("./plugins/clean-js.js") );

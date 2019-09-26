@@ -163,7 +163,7 @@ But they require added technical complexity / infrastructure / cost
 
 ---
 
-![SSG Spectrum](/assets/images/ssg-spectrum.png)
+![SSG Spectrum](/assets/images/ssg-spectrum.svg)
 
 ---
 

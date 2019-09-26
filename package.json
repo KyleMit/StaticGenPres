@@ -4,13 +4,8 @@
   "description": "JAMming out with Static Site Generators: Web development made awesome",
   "scripts": {
     "clean": "rm -rf _site",
-    "fix-file": "npx mkdirp _site/reveal && touch _site/reveal/index.html",
-    "11ty-build": "npx eleventy",
-    "11ty-serve": "npx eleventy --serve",
-    "reveal-serve": "npx reveal-md ./slides/index.md --theme moon",
-    "reveal-build": "npm run fix-file && npx reveal-md ./slides/index.md --static _site/reveal --theme moon",
-    "serve": "npm run reveal-build & npm run 11ty-serve",
-    "build": "npm run 11ty-build && npm run reveal-build"
+    "serve": "npx eleventy --serve",
+    "build": "npx eleventy"
   },
   "keywords": [],
   "author": "Kyle & Zeke",

@@ -4,6 +4,8 @@ module.exports = function(eleventyConfig) {
 
     // add static passthrough
     eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.addPassthroughCopy("reveal");
+    eleventyConfig.addPassthroughCopy("slides");
 
     // add filters
     eleventyConfig.addFilter("cssmin", require("./plugins/clean-css.js") );

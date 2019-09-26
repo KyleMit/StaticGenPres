@@ -1,9 +1,3 @@
----
-layout: default.njk
-class: "block"
----
-
-
 # JAMming Out With Static Site Generators
 
 ## Web Development Made <span class="display-hidden">Awesome</span>

@@ -7,7 +7,8 @@ let NavigateNext = function() {
     if (next) {next.click()}
 }
 
-document.body.addEventListener("keydown", function(event) {
+// can't attach to body (it will be removed)
+document.addEventListener("keydown", function(event) {
     if (event.code === "ArrowLeft") {
         NavigatePrev()
     } else if (event.code === "ArrowRight") {
@@ -15,12 +16,13 @@ document.body.addEventListener("keydown", function(event) {
     }
 })
 
-
-var options = {
-    strings: ['Fast', 'Awesome', 'Secure', 'Simple', 'Serverless', 'Amazing', 'Deployable'],
-    typeSpeed: 90,
-    backDelay: 1400,
-    loop: true
-  };
-  
-  var typed = new Typed('.typed-text', options);
+if (document.querySelector(".typed-text")) {
+    var options = {
+        strings: ['Fast', 'Awesome', 'Secure', 'Simple', 'Serverless', 'Amazing', 'Deployable'],
+        typeSpeed: 90,
+        backDelay: 1400,
+        loop: true
+    };
+    
+    var typed = new Typed('.typed-text', options);
+}

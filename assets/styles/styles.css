@@ -19,10 +19,17 @@ ul, ol {
     text-align: left;
     display: inline-block;
 }
+li > ol, li > ul {
+    display: block;
+}
 aside.notes {
     display: none;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100vh;
+}
 hr {
     background: none;
     border: none;
@@ -123,6 +130,9 @@ span.flex-spacer {
 }
 .typed-text {
     color: #ffff58;
+}
+.display-hidden {
+    display:none;
 }
 .typed-cursor--blink {
     display: none;

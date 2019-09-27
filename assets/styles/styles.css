@@ -37,6 +37,12 @@ hr {
     margin-top: 6rem;
 }
 
+pre.hljs {
+    text-align: left;
+    max-width: 40rem;
+    overflow-y: auto;
+}
+
 /* typography */
 body {
     background: #002b36;

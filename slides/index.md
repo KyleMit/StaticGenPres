@@ -101,6 +101,7 @@ But they require added technical complexity / infrastructure / cost
 
 ---
 
+<!-- .slide: class="two-col" -->
 * Ruby
   * Jekyll
   * Middleman
@@ -126,6 +127,8 @@ But they require added technical complexity / infrastructure / cost
 
 ---
 
+
+<!-- .slide: class="two-col" -->
 * Vanilla JS
   * 11ty
   * Hexo

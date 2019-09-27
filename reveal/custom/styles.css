@@ -4,3 +4,7 @@
 .reveal pre code {
     padding: 10px;
 }
+.two-col > * {
+    column-count: 2;
+    column-gap: 15rem;
+}

@@ -1,17 +1,17 @@
-const Terser = require("terser");
-
+const { minify } = require("terser")
 
 /**
- * Minify CSS source code
-  *
+ * Minify JS source code
+ *
  * @param {String} jsSource
  */
-module.exports = function(jsSource) {
-  let minified = Terser.minify(jsSource);
-  if( minified.error ) {
-      console.log("Terser error: ", minified.error);
-      return jsSource;
+module.exports = async function (jsSource, callback) {
+  try {
+    const minified = await minify(jsSource)
+    callback(null, minified.code)
+  } catch (err) {
+    console.error("Terser error: ", err)
+    // Fail gracefully.
+    callback(null, jsSource)
   }
-
-  return minified.code;
 }

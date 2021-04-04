@@ -11,7 +11,7 @@ module.exports = function(eleventyConfig) {
 
     // add filters
     eleventyConfig.addFilter("cssmin", require("./plugins/clean-css.js") );
-    eleventyConfig.addFilter("jsmin", require("./plugins/clean-js.js") );
+    eleventyConfig.addNunjucksAsyncFilter("jsmin", require("./plugins/clean-js.js"))
 
     // configure markdown engine
     let md = require("./plugins/customize-markdown.js")()

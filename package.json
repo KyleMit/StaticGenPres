@@ -11,7 +11,7 @@
   "author": "Kyle & Zeke",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.2",
     "clean-css": "^5.1.2",
     "highlightjs": "^9.16.2",
     "terser": "^5.6.1"
